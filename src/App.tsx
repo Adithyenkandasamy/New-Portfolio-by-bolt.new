@@ -43,7 +43,7 @@ function App() {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/adithyen-kandasamy"
+              href="https://www.linkedin.com/in/adithyen-k/"
               className="hover:scale-110 transition-transform text-white hover:text-blue-400"
               onMouseEnter={playHover}
               target="_blank"
