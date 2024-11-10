@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
     <section className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center space-y-8">
       <div className="relative w-32 h-32 mb-8">
         <img
-          src="images/Adi.jpeg"
+          src="/images/Adi.jpeg"
           alt="Adithyen Kandasamy - Full Stack Developer"
           className="rounded-full w-full h-full object-cover shadow-xl animate-fadeIn"
         />
