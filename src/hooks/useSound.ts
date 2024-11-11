@@ -3,7 +3,7 @@ import { useCallback, useRef } from 'react';
 export const useSound = () => {
   const audioContext = useRef<AudioContext | null>(null);
 
-  const createOscillator = useCallback((frequency: number, duration: number) => {
+  const createOscillator = useCallback((frequency: number, duration: number, type: OscillatorType = 'sine') => {
     if (!audioContext.current) {
       audioContext.current = new AudioContext();
     }
@@ -11,6 +11,7 @@ export const useSound = () => {
     const oscillator = audioContext.current.createOscillator();
     const gainNode = audioContext.current.createGain();
 
+    oscillator.type = type;
     oscillator.connect(gainNode);
     gainNode.connect(audioContext.current.destination);
 
@@ -30,5 +31,9 @@ export const useSound = () => {
     createOscillator(1500, 0.15);
   }, [createOscillator]);
 
-  return { playHover, playClick };
+  const playImageHover = useCallback(() => {
+    createOscillator(1200, 0.2, 'triangle');
+  }, [createOscillator]);
+
+  return { playHover, playClick, playImageHover };
 };
