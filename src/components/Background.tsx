@@ -7,7 +7,6 @@ const Background: React.FC = () => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create DNA strands
     const createDNAStrands = () => {
       for (let i = 0; i < 20; i++) {
         const strand = document.createElement('div');
@@ -18,7 +17,6 @@ const Background: React.FC = () => {
       }
     };
 
-    // Create floating particles
     const createParticles = () => {
       for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');

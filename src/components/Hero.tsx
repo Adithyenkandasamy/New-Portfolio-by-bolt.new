@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
     <section className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] text-center space-y-8">
       <div className="relative w-32 h-32 mb-8">
         <img
-          src="/images/Adi.jpeg"
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300"
           alt="Adithyen Kandasamy - Full Stack Developer"
           className="rounded-full w-full h-full object-cover shadow-xl animate-fadeIn"
         />
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
           Contact Me
           <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
         </a>
-        {/* <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-4">
           <a
             href="https://github.com/Adithyenkandasamy"
             className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
             <Github size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/adithyen-k"
+            href="https://linkedin.com/in/adithyen-kandasamy"
             className="p-2 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -66,7 +66,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
           >
             <Linkedin size={24} />
           </a>
-        </div> */}
+        </div>
       </div>
     </section>
   );

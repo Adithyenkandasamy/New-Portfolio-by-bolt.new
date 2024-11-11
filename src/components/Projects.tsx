@@ -6,9 +6,15 @@ interface ProjectsProps {
   projects: Project[];
   playHover: () => void;
   playClick: () => void;
+  playImageHover: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ projects, playHover, playClick }) => {
+const Projects: React.FC<ProjectsProps> = ({ 
+  projects, 
+  playHover, 
+  playClick, 
+  playImageHover 
+}) => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
   return (
@@ -25,7 +31,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, playHover, playClick }) =
             }`}
             onMouseEnter={() => {
               setActiveProject(index);
-              playHover();
+              playImageHover();
             }}
             onMouseLeave={() => setActiveProject(null)}
           >

@@ -5,9 +5,15 @@ interface CertificatesProps {
   certificates: Certificate[];
   playHover: () => void;
   playClick: () => void;
+  playImageHover: () => void;
 }
 
-const Certificates: React.FC<CertificatesProps> = ({ certificates, playHover, playClick }) => {
+const Certificates: React.FC<CertificatesProps> = ({ 
+  certificates, 
+  playHover, 
+  playClick,
+  playImageHover 
+}) => {
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
   return (
@@ -22,7 +28,9 @@ const Certificates: React.FC<CertificatesProps> = ({ certificates, playHover, pl
               setSelectedCert(cert);
               playClick();
             }}
-            onMouseEnter={playHover}
+            onMouseEnter={() => {
+              playImageHover();
+            }}
           >
             <div className="aspect-video relative overflow-hidden rounded-lg mb-4">
               <img
