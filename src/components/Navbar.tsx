@@ -33,14 +33,14 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme, playHover, playCli
                 <Github size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/in/adithyen-k/"
+                href="https://linkedin.com/in/adithyen-kandasamy"
                 className={`p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
                   isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
                 }`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHover}
-                aria-label=" Profile"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={20} />
               </a>

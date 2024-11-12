@@ -12,7 +12,7 @@ import { projects, certificates } from './data';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
-  const { playHover, playClick } = useSound();
+  const { playHover, playClick, playImageHover } = useSound();
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
@@ -21,8 +21,18 @@ function App() {
       
       <main className="container mx-auto px-4 py-8 space-y-20 relative z-10">
         <Hero playHover={playHover} />
-        <Projects projects={projects} playHover={playHover} playClick={playClick} />
-        <Certificates certificates={certificates} playHover={playHover} playClick={playClick} />
+        <Projects 
+          projects={projects} 
+          playHover={playHover} 
+          playClick={playClick} 
+          playImageHover={playImageHover}
+        />
+        <Certificates 
+          certificates={certificates} 
+          playHover={playHover} 
+          playClick={playClick} 
+          playImageHover={playImageHover}
+        />
         <Contact playHover={playHover} playClick={playClick} />
       </main>
 
@@ -43,7 +53,7 @@ function App() {
               <Github size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/adithyen-k/"
+              href="https://linkedin.com/in/adithyen-kandasamy"
               className="hover:scale-110 transition-transform text-white hover:text-blue-400"
               onMouseEnter={playHover}
               target="_blank"

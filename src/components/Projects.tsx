@@ -6,26 +6,32 @@ interface ProjectsProps {
   projects: Project[];
   playHover: () => void;
   playClick: () => void;
+  playImageHover: () => void;
 }
 
-const Projects: React.FC<ProjectsProps> = ({ projects, playHover, playClick }) => {
+const Projects: React.FC<ProjectsProps> = ({ 
+  projects, 
+  playHover, 
+  playClick, 
+  playImageHover 
+}) => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
   return (
     <section id="projects" className="scroll-mt-16">
-      <h2 className="text-3xl font-bold mb-8 text-white text-center">
+      <h2 className="text-3xl font-bold mb-8 text-gradient text-center">
         Featured Projects
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className={`group relative overflow-hidden rounded-xl premium-card transition-transform duration-300 hover:scale-105 ${
-              activeProject === index ? 'glow-effect' : ''
+            className={`hover-card premium-card rounded-xl overflow-hidden neon-glow ${
+              activeProject === index ? 'shimmer' : ''
             }`}
             onMouseEnter={() => {
               setActiveProject(index);
-              playHover();
+              playImageHover();
             }}
             onMouseLeave={() => setActiveProject(null)}
           >
@@ -33,18 +39,18 @@ const Projects: React.FC<ProjectsProps> = ({ projects, playHover, playClick }) =
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div className="p-6 relative z-10">
-              <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-gradient">{project.title}</h3>
               <p className="text-blue-100 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full backdrop-blur-sm"
+                    className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full backdrop-blur-sm shimmer"
                   >
                     {tech}
                   </span>
