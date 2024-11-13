@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
       <div className="relative w-32 h-32 mb-8 float-animation">
         <img
           src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300"
-          alt="Adithyen Kandasamy - Full Stack Developer"
+          alt="Adithyaa - Full Stack Developer"
           className="rounded-full w-full h-full object-cover shadow-xl animate-fadeIn hover-card neon-glow"
         />
         <div className="absolute inset-0 rounded-full border-2 border-blue-500 animate-pulse shimmer" />
@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ playHover }) => {
 
       <div className="space-y-4 animate-slideUp">
         <h1 className="text-4xl md:text-5xl font-bold text-gradient">
-          Adithyen Kandasamy
+          Adithya 
         </h1>
         <h2 className="text-xl md:text-2xl text-blue-400 font-semibold shimmer">
           Full Stack Developer
